@@ -1,13 +1,13 @@
 module.exports = {
-  entry: "./src/js/main.js",
+  entry: './src/js/main.js',
   output: {
     path: './dist',
-    filename: "bundle.js",
+    filename: 'bundle.js',
     publicPath: '/'
   },
   devServer: {
     inline: true,
-    contentBase: './dist',
+    contentBase: './dist'
   },
   module: {
     loaders: [
