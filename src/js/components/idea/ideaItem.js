@@ -1,4 +1,5 @@
 import React from 'react';
+require('../../../sass/_ideaItem.scss');
 
 class IdeaItem extends React.Component {
   render() {
