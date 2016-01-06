@@ -6,8 +6,8 @@ const IdeaAPI = {
   findIdeaItem( item ) {
     return this.ideaItems.find( ideaItem => ideaItem.id === item.id );
   },
-  increasePoints( item ) {item.points++;},
-  decreasePoints( item ) {item.points--;},
+  increasePoints( item ) { item.points++; },
+  decreasePoints( item ) { item.points--; },
   addIdeaItem( item ) {
     const ideaItem = this.findIdeaItem( item );
     if ( !ideaItem ) {
@@ -20,7 +20,8 @@ const IdeaAPI = {
         'id': 'ID' + i,
         'heading': 'Idea #' + i,
         'desc': 'Lorem ipsum dolor sit amet.',
-        'added': '2015-01-05'
+        'added': '2015-01-05',
+        'points': 0
       } );
     }
   }

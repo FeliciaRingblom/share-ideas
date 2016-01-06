@@ -24,11 +24,11 @@ const IdeaStore = Object.assign(EventEmitter.prototype, {
 
   dispatcherIndex: register( function( action ) {
     switch (action.actionType) {
-    case ActionTypes.ADD_IDEA:
-      IdeaAPI.addItem( action.item );
+    case ActionTypes.LIKE_IDEA:
+      IdeaAPI.increasePoints( action.idea );
       break;
-    case ActionTypes.REMOVE_IDEA:
-      IdeaAPI.removeItem( action.item );
+    case ActionTypes.DISLIKE_IDEA:
+      IdeaAPI.decreasePoints( action.idea );
       break;
     default:
       break;

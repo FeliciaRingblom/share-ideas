@@ -1,4 +1,4 @@
 export default {
-  ADD_IDEA: 'ADD_IDEA',
-  REMOVE_IDEA: 'REMOVE_IDEA',
+  LIKE_IDEA: 'LIKE_IDEA',
+  DISLIKE_IDEA: 'DISLIKE_IDEA'
 };
