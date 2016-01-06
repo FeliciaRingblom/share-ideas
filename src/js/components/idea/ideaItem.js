@@ -3,7 +3,7 @@ import React from 'react';
 class IdeaItem extends React.Component {
   render() {
     return (
-      <div clasName="idea-container">
+      <div className="idea-container col-sm-6 col-md-4 col-lg-3">
         <h3 className="idea-heading">{this.props.heading}</h3>
         <p className="idea-desc">{this.props.desc}</p>
         <p className="idea-added-date">{this.props.added}</p>
