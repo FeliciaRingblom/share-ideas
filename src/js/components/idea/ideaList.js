@@ -35,5 +35,3 @@ export default class IdeaList extends React.Component {
     );
   }
 }
-
-export default IdeaList;
