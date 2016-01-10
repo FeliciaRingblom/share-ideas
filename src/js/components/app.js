@@ -1,7 +1,13 @@
 import React from 'react';
+import Header from './header/header';
 
-export default class App extends React.Component {
-  render() {
-    return <h1>Share Ideas YOLO</h1>;
-  }
-}
+require('../../sass/_app.scss');
+
+export default ( props ) => {
+  return (
+    <div className="container">
+      <Header />
+      { props.children }
+    </div>
+  );
+};
