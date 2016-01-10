@@ -18,9 +18,8 @@ const IdeaList = (props) => {
   );
 };
 
-
-export default StoreWatchMixin(IdeaList, getIdeas);
-
 IdeaList.propTypes = {
   ideas: React.PropTypes.array.isRequired,
 };
+
+export default StoreWatchMixin(IdeaList, getIdeas);

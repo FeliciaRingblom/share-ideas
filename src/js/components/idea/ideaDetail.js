@@ -27,8 +27,8 @@ const IdeaItem = (props) => {
   );
 };
 
-export default StoreWatchMixin( IdeaItem, getIdeaItem );
-
 IdeaItem.propTypes = {
   item: React.PropTypes.object.isRequired,
 };
+
+export default StoreWatchMixin( IdeaItem, getIdeaItem );
