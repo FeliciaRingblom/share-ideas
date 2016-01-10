@@ -3,6 +3,7 @@ import App from './components/app';
 import Home from './components/home/home';
 import IdeaList from './components/idea/ideaList';
 import IdeaDetail from './components/idea/ideaDetail';
+import AddIdea from './components/idea/addIdea';
 import { IndexRoute, browserHistory, Router, Route } from 'react-router';
 
 export default () => {
@@ -12,6 +13,7 @@ export default () => {
         <IndexRoute component={ Home }/>
         <Route path="ideas" component={ IdeaList }/>
         <Route path="idea/:idea" component={ IdeaDetail } />
+        <Route path="/add-idea" component ={ AddIdea } />
       </Route>
     </Router>
   );
