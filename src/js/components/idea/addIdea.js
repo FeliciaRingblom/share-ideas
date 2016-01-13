@@ -19,7 +19,6 @@ class AddIdea extends React.Component {
     this.setState({dirty: true});
     const field = event.target.name;
     const value = event.target.value;
-    console.log(field);
     this.state.idea[field] = value;
     return this.setState({idea: this.state.idea});
   }

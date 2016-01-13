@@ -1,3 +1,6 @@
+const noInitialIdeas = 9;
+let lastUsedId = 0;
+
 const IdeaAPI = {
   ideaItems: [],
   removeIdeaItem( item ) {
@@ -11,11 +14,17 @@ const IdeaAPI = {
   addIdeaItem( item ) {
     const ideaItem = this.findIdeaItem( item );
     if ( !ideaItem ) {
-      this.ideaItems.push( Object.assign( {qty: 1, id: 99}, item ) );
+      this.ideaItems.push( Object.assign( {
+        qty: 1,
+        id: 'ID' + (lastUsedId + 1),
+        points: 0,
+        added: '2016-01-12'
+      }, item ) );
+      lastUsedId++;
     }
   },
   init() {
-    for ( let i = 1; i < 9; i++ ) {
+    for ( let i = 1; i < noInitialIdeas; i++ ) {
       this.ideaItems.push( {
         'id': 'ID' + i,
         'heading': 'Idea #' + i,
@@ -23,6 +32,7 @@ const IdeaAPI = {
         'added': '2015-01-05',
         'points': 0
       } );
+      lastUsedId = i;
     }
   }
 };
