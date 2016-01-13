@@ -11,7 +11,7 @@ const IdeaAPI = {
   addIdeaItem( item ) {
     const ideaItem = this.findIdeaItem( item );
     if ( !ideaItem ) {
-      this.ideaItems.push( Object.assign( {qty: 1}, item ) );
+      this.ideaItems.push( Object.assign( {qty: 1, id: 99}, item ) );
     }
   },
   init() {
