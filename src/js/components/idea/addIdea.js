@@ -12,9 +12,6 @@ class AddIdea extends React.Component {
       dirty: false
     };
   }
-  saveIdea() {
-    console.log('save idea');
-  }
   setIdeaState(event) {
     this.setState({dirty: true});
     const field = event.target.name;
