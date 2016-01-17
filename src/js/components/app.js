@@ -3,7 +3,7 @@ import Header from './header/header';
 
 require('../../sass/_app.scss');
 
-export default ( props ) => {
+const App = (props) => {
   return (
     <div className="container">
       <Header />
@@ -11,3 +11,9 @@ export default ( props ) => {
     </div>
   );
 };
+
+App.propTypes = {
+  children: React.PropTypes.node,
+};
+
+export default App;

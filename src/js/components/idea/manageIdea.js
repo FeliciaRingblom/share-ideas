@@ -70,4 +70,8 @@ class ManageIdea extends React.Component {
   }
 }
 
+ManageIdea.propTypes = {
+  params: React.PropTypes.object
+};
+
 export default ManageIdea;
