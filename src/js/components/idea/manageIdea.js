@@ -56,9 +56,8 @@ class ManageIdea extends React.Component {
       IdeaActions.createIdea(this.state.idea);
     }
 
-    IdeaActions.createIdea(this.state.idea);
     this.setState({dirty: false});
-    Toastr.success('Autor saved');
+    Toastr.success('Idea saved');
   }
   render() {
     return (
