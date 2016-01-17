@@ -14,7 +14,7 @@ const IdeaItem = (props) => {
   return (
     <div className="idea-container col-sm-6 col-md-4 col-lg-3">
       <h3 className="idea-heading">{props.item.heading}</h3>
-      <p className="idea-desc">{props.item.desc}</p>
+      <p className="idea-desc">{props.item.description}</p>
       <p className="idea-added-date">{props.item.added}</p>
       <p className="">{props.item.points}</p>
       <button type="button" onClick={ IdeaActions.increasePoints.bind(null, props.item) }>Like</button>

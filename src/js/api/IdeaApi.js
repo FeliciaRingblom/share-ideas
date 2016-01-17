@@ -28,7 +28,7 @@ const IdeaAPI = {
       this.ideaItems.push( {
         'id': 'ID' + i,
         'heading': 'Idea #' + i,
-        'desc': 'Lorem ipsum dolor sit amet.',
+        'description': 'Lorem ipsum dolor sit amet.',
         'added': '2015-01-05',
         'points': 0
       } );

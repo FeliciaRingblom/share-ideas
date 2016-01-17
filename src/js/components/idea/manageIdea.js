@@ -3,7 +3,7 @@ import IdeaForm from './ideaForm';
 import IdeaActions from '../../actions/ideaActions';
 import Toastr from 'toastr';
 
-class AddIdea extends React.Component {
+class ManageIdea extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -57,4 +57,4 @@ class AddIdea extends React.Component {
   }
 }
 
-export default AddIdea;
+export default ManageIdea;

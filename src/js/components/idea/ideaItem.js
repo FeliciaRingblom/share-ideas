@@ -10,7 +10,7 @@ const IdeaItem = (props) => {
      <Link to={ `/idea/${props.item.id}` }>
       <h3 className="idea-heading">{props.item.heading}</h3>
      </Link>
-      <p className="idea-desc">{props.item.desc}</p>
+      <p className="idea-desc">{props.item.description}</p>
       <p className="idea-added-date">{props.item.added}</p>
       <p className="">{props.item.points}</p>
       <button type="button" onClick={ IdeaActions.increasePoints.bind(null, props.item) }>Like</button>
