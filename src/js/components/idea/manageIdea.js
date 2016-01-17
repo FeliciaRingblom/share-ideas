@@ -2,6 +2,7 @@ import React from 'react';
 import IdeaForm from './ideaForm';
 import IdeaActions from '../../actions/ideaActions';
 import Toastr from 'toastr';
+import IdeaStore from '../../stores/ideaStore';
 
 class ManageIdea extends React.Component {
   constructor(props) {
@@ -11,6 +12,13 @@ class ManageIdea extends React.Component {
       errors: {},
       dirty: false
     };
+  }
+  componentWillMount() {
+    const ideaId = this.props.params.idea;
+
+    if (ideaId) {
+      this.setState({idea: IdeaStore.getIdeaById(ideaId)});
+    }
   }
   setIdeaState(event) {
     this.setState({dirty: true});
@@ -40,6 +48,12 @@ class ManageIdea extends React.Component {
     event.preventDefault();
     if (!this.ideaFormIsValid()) {
       return;
+    }
+
+    if (this.state.idea.id) {
+      IdeaActions.updateIdea(this.state.idea);
+    } else {
+      IdeaActions.createIdea(this.state.idea);
     }
 
     IdeaActions.createIdea(this.state.idea);

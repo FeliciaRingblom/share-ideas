@@ -21,6 +21,9 @@ const IdeaStore = Object.assign(EventEmitter.prototype, {
   getIdeas() {
     return IdeaAPI.ideaItems;
   },
+  getIdeaById( ideaId ) {
+    return IdeaAPI.ideaItems.find( ({ id }) => id === ideaId );
+  },
 
   dispatcherIndex: register( function( action ) {
     switch (action.actionType) {

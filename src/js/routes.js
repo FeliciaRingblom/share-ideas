@@ -11,9 +11,10 @@ export default () => {
      <Router history={ browserHistory }>
       <Route path="/" component = { App }>
         <IndexRoute component={ Home }/>
-        <Route path="ideas" component={ IdeaList }/>
-        <Route path="idea/:idea" component={ IdeaDetail } />
-        <Route path="/add-idea" component ={ ManageIdea } />
+        <Route name="ideaList" path="ideas" component={ IdeaList }/>
+        <Route name="ideaDetail" path="idea/:idea" component={ IdeaDetail } />
+        <Route name="addIdea" path="/add-idea" component ={ ManageIdea } />
+        <Route name="editIdea" path="/edit-idea/:idea" component ={ ManageIdea } />
       </Route>
     </Router>
   );
