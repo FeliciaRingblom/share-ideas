@@ -1,13 +1,12 @@
 {
-  "name": "flux-egghead",
+  "name": "Share Ideas",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Platform to share great ideas",
+  "main": "main.js",
   "scripts": {
     "start": "webpack-dev-server"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Felicia Ringblom",
   "dependencies": {
     "flux": "^2.1.1",
     "history": "^1.17.0",
