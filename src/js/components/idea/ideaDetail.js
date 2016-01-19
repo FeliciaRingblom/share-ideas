@@ -2,6 +2,7 @@ import React from 'react';
 import StoreWatchMixin from '../../mixins/StoreWatchMixin';
 import IdeaActions from '../../actions/ideaActions';
 import IdeaStore from '../../stores/ideaStore';
+import { Link } from 'react-router';
 
 require('../../../sass/_ideaDetail.scss');
 
@@ -23,6 +24,7 @@ const IdeaItem = (props) => {
         <li>Tech</li>
         <li>App</li>
       </ul>
+      <Link to={`/edit-idea/${props.item.id}`} params={{id: props.item.id}}>Edit</Link>
     </div>
   );
 };
